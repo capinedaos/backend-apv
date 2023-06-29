@@ -26,7 +26,7 @@ const registrar = async (req, res) => {
       nombre,
       password: hashPassword,
     });
-    
+
     const veterinarioGuardado = await veterinario.save();
 
     // Remove password from response
