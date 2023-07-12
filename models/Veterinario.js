@@ -50,7 +50,6 @@ const veterinarioSchema = mongoose.Schema({
 veterinarioSchema.methods.comprobarPassword = async function (
   passwordFormulario
 ) {
-  console.log(await bcrypt.compare(passwordFormulario, this.password));
   return await bcrypt.compare(passwordFormulario, this.password);
 };
 
